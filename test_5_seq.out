@@ -1,0 +1,275 @@
+Creating system...
+Creating TicketSystem...
+Creating TrainSystem...
+Creating UserSystem...
+System created
+Running system...
+[12824] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Leizi
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Nightmare
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Rangers
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Spot
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Rangers
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Schwarz
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Vanilla
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: WaaiFu
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+-1
+[12828] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: I_am_the_admin
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+-1
+[12837] -1
+[12843] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: I_am_the_admin
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Leizi
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Popukar
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Vanilla
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+-1
+[12844] -1
+[12854] -1
+[12861] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Leizi
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Manticore
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Nightmare
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Popukar
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+-1
+[12865] -1
+[12874] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Spot
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Vanilla
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: WaaiFu
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Yato
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+-1
+[12876] -1
+[12883] -1
+[12891] -1
+[12892] -1
+[12900] -1
+[12904] -1
+[12911] -1
+[12919] -1
+[12929] -1
+[12937] -1
+[12939] -1
+[12946] -1
+[12953] -1
+[12958] -1
+[12961] -1
+[12965] -1
+[12966] -1
+[12971] -1
+[12976] -1
+[12980] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Nightmare
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Plume
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Popukar
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Provence
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+-1
+[12982] -1
+[12992] -1
+[12998] -1
+[13001] -1
+[13004] -1
+[13011] -1
+[13016] -1
+[13021] -1
+[13023] -1
+[13033] -1
+[13042] -1
+[13046] -1
+[13047] -1
+[13051] -1
+[13059] -1
+[13060] -1
+[13064] -1
+[13066] -1
+[13069] -1
+[13076] -1
+[13084] -1
+[13090] -1
+[13097] -1
+[13105] -1
+[13111] -1
+[13116] -1
+[13126] -1
+[13130] -1
+[13134] -1
+[13144] -1
+[13145] -1
+[13146] -1
+[13153] -1
+[13163] -1
+[13166] -1
+[13173] -1
+[13178] -1
+[13185] -1
+[13193] -1
+[13194] -1
+[13202] -1
+[13205] -1
+[13214] -1
+[13219] -1
+[13222] -1
+[13232] -1
+[13241] -1
+[13249] -1
+[13256] -1
+[13260] -1
+[13266] Nightmare 夜魔 policespies@Where.is 3
+[13272] -1
+[13273] -1
+[13278] -1
+[13280] -1
+[13289] -1
+[13299] -1
+[13301] -1
+[13302] -1
+[13310] -1
+[13316] -1
+[13322] -1
+[13323] -1
+[13330] -1
+[13339] -1
+[13345] -1
+[13350] -1
+[13354] -1
+[13363] -1
+[13369] -1
+[13372] -1
+[13381] 0
+[13390] -1
+[13392] -1
+[13397] -1
+[13407] -1
+[13411] -1
+[13420] 0
+[13430] -1
+[13438] 0
+[13440] -1
+[13443] -1
+[13447] -1
+[13454] -1
+[13461] -1
+[13464] -1
+[13465] -1
+[13470] -1
+[13472] -1
+[13479] -1
+[13488] -1
+[13489] -1
+[13499] 0
+[13509] 1
+ 宁夏石嘴山市 operator[] pos 0 size 0
+terminate called after throwing an instance of 'sjtu::index_out_of_bound'

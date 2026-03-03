@@ -1,0 +1,125 @@
+Creating system...
+Creating TicketSystem...
+Creating TrainSystem...
+Creating UserSystem...
+System created
+Running system...
+[7] [DEBUG] add_user #1: I_am_the_admin
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Leizi
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: I_am_the_admin
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] Before insert for I_am_the_admin
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: I_am_the_admin
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Leizi
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Popukar
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Vanilla
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] After insert for I_am_the_admin
+0
+[17] -1
+[23] -1
+[27] -1
+[29] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Nightmare
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Rangers
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Spot
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Spot
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Vanilla
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: WaaiFu
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Yato
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 

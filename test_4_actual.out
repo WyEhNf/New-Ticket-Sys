@@ -1,0 +1,597 @@
+Creating system...
+Creating TicketSystem...
+Creating TrainSystem...
+Creating UserSystem...
+System created
+Running system...
+[6626] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Executor
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Leizi
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Purestream
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Firewatch
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Gavial
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Greyy
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Hoshiguma
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Istina
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Gavial
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Gitano
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Glaucus
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Grani
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Gravel
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: GreyThroat
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: GreyThroat
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+-1
+[6633] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Matoimaru
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Meteor
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Myrrh
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Nightmare
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Plume
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Skyfire
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Steward
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Vulcan
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Plume
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Popukar
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Pramanix
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: ProjeKTRed
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Provence
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Ptilopsis
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Ptilopsis
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+-1
+[6638] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Matoimaru
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Matterhorn
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: May
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Mayer
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Melantha
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+-1
+[6646] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Bagpipe
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: BluePoison
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Chen
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Cuora
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Durnar
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Frostleaf
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Hibiscus
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Ifrit
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Cuora
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Cutter
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Deepcolor
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Dobermann
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Durin
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Elysium
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Estelle
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Ethan
+-1
+[6654] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Scavenger
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Shining
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: SilverAsh
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Specter
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Texas
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Vulcan
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Purestream
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Rangers
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Reed
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Rope
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Saria
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Savage
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Sesa
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Shaw
+-1
+[6664] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Myrrh
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Myrtle
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Nearl
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Nian
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Nightingale
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Orchid
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Perfumer
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Phantom
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Nightmare
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: NoirCorne
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Orchid
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Perfumer
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Phantom
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Platinum
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+-1
+[6665] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Shining
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: ShiraYuki
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Sideroca
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Siege
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Silence
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: SilverAsh
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Skadi
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Specter
+-1
+[6668] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: BluePoison
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Breeze
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Broca
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Cardigan
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Catapult
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Ceobe
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Ceylon
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Croissant
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Chen
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Cliffheart
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Conviction
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Courier
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Croissant
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Cutter
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+-1
+[6676] -1
+[6686] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Scavenger
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Schwarz
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Sesa
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Shamare
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Shaw
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+-1
+[6695] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Greyy
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Gummy
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Haze
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Hellagur
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Hibiscus
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Hoshiguma
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Hung
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Lappland
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Hoshiguma
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Hung
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: I_am_the_admin
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Ifrit
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Indra
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Kroos
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Lappland
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Lava
+-1
+[6698] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Aak
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Adnachiel
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Ambriel
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Amiya
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Angelina
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Ansel
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Astesia
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: BluePoison
+-1
+[6708] -1
+[6716] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Leizi
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Liskarm
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Magallan
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Manticore
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Matoimaru
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Matterhorn
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: May
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Mayer
+-1
+[6721] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Bagpipe
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Beagle
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Beehunter
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Bibeak
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Bison
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Blaze
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+-1
+[6725] 0
+[6728] [DEBUG] add_user #1: Swire
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Specter
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Spot
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Steward
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Sussurro
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Swire
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Texas
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Vermeil
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Vigna
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Texas
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Utage
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Vanilla
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Vermeil
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Vigna
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+0
+[6735] -1
+[6737] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: SilverAsh
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Skadi
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Skyfire
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Snowsant
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Sora
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+-1
+[6747] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Vulcan
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: W
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: WaaiFu
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Warfarin
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Weedy
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Yato
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Zima
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+-1
+[6753] -1
+[6756] -1
+[6758] -1
+[6766] -1
+[6768] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Durnar
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Earthspirit
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Elysium
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Estelle
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Ethan
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+-1
+[6776] -1
+[6778] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Executor
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Exusiai
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Eyjafjalla
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: FEater
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Fang
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Firewatch
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Flamebringer
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Franka
+-1
+[6783] -1
+[6785] -1
+[6788] 0
+[6793] -1
+[6802] -1
+[6805] 0
+[6815] -1
+[6816] -1
+[6826] -1
+[6831] -1
+[6835] -1
+[6841] -1
+[6843] -1
+[6845] -1
+[6847] -1
+[6852] -1
+[6860] -1
+[6865] -1
+[6875] -1
+[6884] 0
+[6888] -1
+[6896] -1
+[6903] -1
+[6905] -1
+[6914] -1
+[6922] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Meteor
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Meteorite
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Midnight
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Mostima
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Mousse
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Mousse
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+-1
+[6925] -1
+[6930] -1
+[6931] 0
+[6937] -1
+[6945] -1
+[6955] -1
+[6957] -1
+[6960] -1
+[6968] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Istina
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Jessica
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Kroos
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Lappland
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Lava
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+-1
+[6978] 0
+[6983] 0
+[6984] -1
+[6988] 0
+[6998] -1
+[7002] Gravel 砾砾 that.each.time@ended.either 1
+[7012] 0
+[7020] -1
+[7030] Steward 史都华德 society.at@large.or 1
+[7034] -1
+[7038] 0
+[7048] -1
+[7057] -1
+[7058] 0
+[7063] -1
+[7073] Gitano 远山 sprang.the@chartered.burghers 1
+[7074] -1
+[7080] Dobermann 杜宾 in.a.word.oppressor@and.oppres 1
+[7089] -1
+[7096] -1
+[7097] Purestream 清流 party.itself@To.this 1
+[7101] 0
+[7102] 0
+[7107] [DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Firewatch
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Flamebringer
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Franka
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Frostleaf
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: Frostleaf
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+[DEBUG] User::deserialize
+[DEBUG] User::deserialize done: 
+0
+[7110] Elysium 极境 has.simplified@the.class 3
+[7114] -1
+[7123] -1
+[7127] Manticore 狮蝎 not.hurled@back.the 2
+[7130] -1
+[7135] -1
+[7145] Sora 空空 have.patricians@knights.plebei 1
+[7154] -1
+[7164] 0
+[7170] -1
+[7176] Durin 杜林 armed.and.selfgoverning@associ 1
+[7183] 0
+[7184] -1
+[7187] Saria 塞雷娅 in.the.common@ruin.of 1
+[7196] 0
+[7199] Gitano 远山 sprang.the@chartered.burghers 1
+[7209] -1
+[7218] -1
+[7226] Sesa 慑砂 This.market@has.given 1
+[7234] -1
+[7240] 0
+[7241] -1
+[7242] terminate called after throwing an instance of 'std::bad_alloc'
+  what():  std::bad_alloc

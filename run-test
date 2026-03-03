@@ -1,0 +1,115 @@
+#!/bin/bash
+
+# 检查是否提供了测试组名称
+if [ $# -eq 0 ]; then
+  echo "Usage: $0 <testcase_group_name>"
+  echo "Available testcase groups from config.json:"
+  jq -r '.Groups[].GroupName' testcases/config.json | sed 's/^/  /'
+  exit 1
+fi
+
+# 检查 config.json 文件是否存在
+if [ ! -e testcases/config.json ]; then
+  echo "./testcases/config.json does not exist, please extract testcases to that directory."
+  exit 1
+fi
+
+# 检查 jq 是否安装
+if [ ! -e "$(which jq)" ]; then
+  echo 'You need the program "jq" to use this script.'
+  echo 'Run "sudo apt install jq" to install it.'
+  exit 1
+fi
+
+# 检查测试组是否存在于 config.json 中
+if ! jq -e ".Groups[] | select(.GroupName == \"$1\")" testcases/config.json > /dev/null; then
+  echo "Testcase group '$1' not found in config.json"
+  echo "Available testcase groups:"
+  jq -r '.Groups[].GroupName' testcases/config.json | sed 's/^/  /'
+  exit 1
+fi
+
+# 获取测试点列表
+list=$(jq -r ".Groups[] | select(.GroupName == \"$1\") | .TestPoints[]" testcases/config.json)
+
+# 可执行文件名称
+exename="code"
+if [ ! -e "$exename" ]; then
+  echo "Please compile the ticket system and place the executable at \"$exename\""
+  exit 1
+fi
+
+# 创建临时文件函数
+function tmp () {
+  if [ "$(uname -s)" = "Darwin" ]; then
+    mktemp /tmp/ticket.XXXXXXXXXX
+  else
+    mktemp -p /tmp ticket.XXXXXXXXXX
+  fi
+}
+
+# 创建临时目录函数
+function tmpdir () {
+  if [ "$(uname -s)" = "Darwin" ]; then
+    mktemp -d /tmp/ticket.XXXXXXXXXX
+  else
+    mktemp -d -p /tmp ticket.XXXXXXXXXX
+  fi
+}
+
+# 创建测试目录
+testdir="$(tmpdir)"
+cp "$exename" "$testdir/"
+exe="$testdir/$exename"
+cwd="$(pwd)"
+basedir="$cwd/testcases"
+
+# 切换到测试目录
+cd "$testdir"
+
+# 遍历每个测试点
+for i in $list; do
+  # 输出调试信息
+  echo "Processing test case: $i"
+  
+  # 拼接完整的输入文件路径
+  input_file="$basedir/$i.in"
+  output_file="$basedir/$i.out"
+  
+  # 检查输入文件是否存在
+  echo "Checking if input file exists: $input_file"
+  if [ ! -e "$input_file" ]; then
+    echo "Error: Input file $input_file does not exist"
+    continue
+  fi
+
+  outfile="$(tmp)"
+  difffile="$(tmp)"
+
+  echo "About to run input #$i..."
+  
+  # 运行测试
+  time "$exe" < "$input_file" > "$outfile"
+
+  # 比较输出文件
+  if diff -ZB "$outfile" "$output_file" > "$difffile"; then
+    true
+  else
+    # 输出差异并备份失败的输出文件
+    cat "$difffile" | head -5
+    backup="test-$1-$i-$(date '+%s').log"
+    cp "$outfile" "$cwd/$backup"
+    echo "Test failed on input #$i."
+    echo "Output saved to $backup"
+    rm "$outfile" "$difffile"
+    continue
+  fi
+
+  # 清理临时文件
+  rm "$outfile" "$difffile"
+done
+
+# 清理测试目录
+rm -r "$testdir"
+
+echo "Testcase complete, all tests passed successfully."

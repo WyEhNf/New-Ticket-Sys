@@ -1,0 +1,23 @@
+[1] add_user -u root -p rootpass -n 张三 -m root@mail.com -g 10
+[2] login -u root -p rootpass
+[3] add_train -i T1 -n 2 -m 100 -s 北京|上海 -p 300 -x 08:00 -t 300 -o _ -d 06-01|06-30 -y G
+[4] release_train -i T1
+[5] query_train -i T1 -d 06-15
+[6] query_ticket -s 北京 -t 上海 -d 06-15
+[7] buy_ticket -u root -i T1 -d 06-15 -n 2 -f 北京 -t 上海
+[8] query_order -u root
+[9] refund_ticket -u root
+[10] query_order -u root
+[11] clean
+[12] add_user -u root -p rootpass -n 张三 -m root@mail.com -g 10
+[13] login -u root -p rootpass
+[14] add_train -i T1 -n 2 -m 100 -s 北京|上海 -p 300 -x 08:00 -t 300 -o _ -d 06-01|06-30 -y G
+[15] release_train -i T1
+[16] query_train -i T1 -d 06-15
+[17] query_ticket -s 北京 -t 上海 -d 06-15
+[18] buy_ticket -u root -i T1 -d 06-15 -n 2 -f 北京 -t 上海
+[19] query_order -u root
+[20] refund_ticket -u root
+[21] query_order -u root
+[22] exit
+
