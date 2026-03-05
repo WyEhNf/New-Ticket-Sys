@@ -157,7 +157,7 @@ class Ticket {
 
 class order {
    public:
-    static constexpr int MAX_STATUS_LEN = 100;
+    static constexpr int MAX_STATUS_LEN = 50;
 
     Ticket ticket;
     int num;
