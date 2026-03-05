@@ -3,6 +3,7 @@
 #include "list.hpp"
 #include "map.hpp"
 #include "vector.hpp"
+#include "String.hpp"
 
 
 using namespace std;
@@ -325,8 +326,6 @@ class BPlusTree {
 
         for (int i = 0; i <= y.key_cnt; i++) {
             y.child[i] = x.child[mid + 1 + i];
-            Node c = node(y.child[i]);
-            c.parent = new_node(y);
         }
 
         x.key_cnt = mid;
@@ -406,7 +405,7 @@ class BPlusTree {
         write_node(left, l);
         write_node(par, left.parent);
 
-        if (par.parent != -1 && par.key_cnt < min_leaf_keys())
+        if (par.parent != -1 && par.key_cnt < min_internal_keys())
             fix_internal(left.parent);
 
         if (par.key_cnt == 0 && left.parent == root()) {
@@ -562,14 +561,20 @@ class BPlusTree {
     vector<Key> find(const IndexType& idx) {
         Key low{};
         low.index = idx;
-        low.value = numeric_limits<ValueType>::min();
+        if constexpr (std::is_same_v<ValueType, String>) {
+            low.value = String::min_value();
+        } else {
+            low.value = ValueType{};
+        }
         int u = find_leaf(low);
         vector<Key> result;
         while (u != -1) {
             Node x = node(u);
+            bool found = false;
             for (int i = 0; i < x.key_cnt; i++) {
                 if (x.keys[i].index == low.index) {
                     result.push_back(x.keys[i]);
+                    found = true;
                 } else if (x.keys[i].index > low.index) {
                     return result;
                 }
@@ -592,6 +597,7 @@ class BPlusTree {
         river.write_info(rp, 1);
         river.write_info(1, 2);
         add_to_cache(r, rp);
-    }  // namespace sjtu
-};  // namespace sjtu
+    }
+};
+
 }  // namespace sjtu

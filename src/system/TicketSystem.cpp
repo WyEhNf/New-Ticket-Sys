@@ -1,35 +1,24 @@
 #include "../../include/system/TicketSystem.hpp"
 #include <iostream>
-#include <time.h>
 using namespace std;
 namespace sjtu {
 
 bool TicketSystem::add_ticket(const Train& train) {
-    // std::cerr<<"here!!\n";
-    // clock_t S=clock();
+    // std::cerr<<"add_ticket for train "<<train.ID<<", sale range: "<<train.sale_begin<<" to "<<train.sale_end<<", stationNum: "<<train.stationNum<<", date.size: "<<train.date.size()<<std::endl;
     int cnt=0;
-
-    // std:cerr<<train.date.size()<<' '<<train.stationNum<<'\n';
 
     for (int day = train.sale_begin; day <= train.sale_end; day++) {
         for (int i = 0; i < train.stationNum - 1; i++) {
             TicketKey key{day+train.date[i], train.stations[i]};
             for(int j=i+1;j<train.stationNum;j++)
             {
-                // std::cerr<<"!!"<<train.seat_res.size()<<'\n';
-                //  std::cerr<<train.stations.size()<<' '<<train.stations[0]<<'\n';
-                // std::cerr<<"adding ticket "<<train.ID<<' '<<train.stations[i]<<' '<<train.stations[j]<<' '<<day<<endl;
                  Ticket ticket(train, train.ID,
                           train.stations[i], train.stations[j], day);
-                // std::cerr<<"added ticket "<<train.ID<<' '<<train.stations[i]<<' '<<train.stations[j]<<' '<<day<<endl;
-                // clock_t T=clock();
                 ticket_tree.insert(key, ticket);
-                // cerr<<(double)(T-S)/CLOCKS_PER_SEC<<'\n';
                cnt++;
             }
         }
     }
-    // std::cerr<<"addded\n";
     // std::cerr<<"added tickets: "<<cnt<<'\n';
     return true;
 }
@@ -54,12 +43,15 @@ bool TicketSystem::Compare_with_time(
 bool TicketSystem::query_ticket(const String& from_station,
                                 const String& to_station, int date,
                                 CompareType cmp_type) {
+    // std::cerr<<"query_ticket: "<<from_station<<" -> "<<to_station<<", date="<<date<<std::endl;
     TicketKey low_key{date, from_station};
     TicketKey high_key{date, to_station};
     auto low_res = ticket_tree.find(low_key);
-    // std::cerr<<"query ticket from "<<from_station<<' '<<to_station<<' '<<date<<endl;
-    // std::cerr<<"low res size "<<low_res.size()<<endl;
-    // std::cerr<<low_res.size()<<endl;
+    // std::cerr<<"low_res.size() = "<<low_res.size()<<std::endl;
+    // for (int i = 0; i < low_res.size(); i++) {
+    //     std::cerr<<"  found ticket "<<i<<": "<<low_res[i].value.trainID<<" from "<<low_res[i].value.from_station
+    //              <<" to "<<low_res[i].value.to_station<<", date="<<low_res[i].value.date<<std::endl;
+    // }
     if (low_res.size() == 0) {cout<<0<<'\n'; return true;}
     if (cmp_type == PRICE)
         low_res.sort(Compare_with_cost);
@@ -67,13 +59,16 @@ bool TicketSystem::query_ticket(const String& from_station,
         low_res.sort(Compare_with_time);
     // std::cerr<<"after sort "<<low_res.size()<<endl;
     vector<BPlusTree<TicketKey, Ticket>::Key> final_res;
+    // cout<<'\n';
     for (int i = 0; i < low_res.size(); i++) {
         Ticket t = low_res[i].value;
+        // cout<<t.to_station<<' ';
         // std::cerr<<t.to_station<<'\n';
         if (t.to_station == to_station) {
             final_res.push_back(low_res[i]);
         }
     }
+    // cout<<'\n';
     if (final_res.empty()) {cout<<0<<'\n'; return true;}
     cout << final_res.size() << endl;
     for (auto& item : final_res) {

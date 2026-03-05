@@ -106,6 +106,7 @@ class MemoryRiver {
    private:
     fstream file;
     string file_name;
+    static constexpr int CURRENT_VERSION = 1;  // Current serialization version
 
    public:
     MemoryRiver() = default;
@@ -118,11 +119,33 @@ class MemoryRiver {
     void initialise(string fn = "") {
         if (!fn.empty()) file_name = fn;
         if (!filesystem::exists(file_name)) {
+            // Create new file with current version
             file.open(file_name, ios::binary | ios::in | ios::out | ios::trunc);
             int zero = 0;
+            // Write info header (info_len ints)
             for (int i = 0; i < info_len; i++)
                 file.write(reinterpret_cast<char*>(&zero), sizeof(int));
+            // Write version after the info header
+            file.write(reinterpret_cast<const char*>(&CURRENT_VERSION), sizeof(int));
             file.close();
+        } else {
+            // Check existing file version (version is at position info_len * sizeof(int))
+            fstream check_file(file_name, ios::binary | ios::in);
+            check_file.seekg(info_len * sizeof(int));
+            int stored_version = 0;
+            check_file.read(reinterpret_cast<char*>(&stored_version), sizeof(int));
+            check_file.close();
+
+            if (stored_version != CURRENT_VERSION) {
+                // Version mismatch: clear old file and recreate with current version
+                filesystem::remove(file_name);
+                file.open(file_name, ios::binary | ios::in | ios::out | ios::trunc);
+                int zero = 0;
+                for (int i = 0; i < info_len; i++)
+                    file.write(reinterpret_cast<char*>(&zero), sizeof(int));
+                file.write(reinterpret_cast<const char*>(&CURRENT_VERSION), sizeof(int));
+                file.close();
+            }
         }
         file.open(file_name, ios::binary | ios::in | ios::out);
     }
@@ -134,7 +157,7 @@ class MemoryRiver {
 
     void write_info(int x, int n) {
         file.seekp((n - 1) * sizeof(int));
-        file.write(reinterpret_cast<char*>(&x), sizeof(int));
+        file.write(reinterpret_cast<char*>(&x), sizeof(x));
     }
 
     int write(const T& t) {

@@ -78,7 +78,6 @@ class User {
 
     // serialization helpers
     void serialize(std::ostream &os) const {
-        std::cerr << "[DEBUG] User::serialize: " << UserName << std::endl;
         os.write(reinterpret_cast<const char*>(&privilege), sizeof(privilege));
         Serializer<String>::write(os, UserName);
         Serializer<String>::write(os, PassWord);
@@ -90,22 +89,29 @@ class User {
             Serializer<order>::write(os, bought_tickets[i]);
         }
         os.write(reinterpret_cast<const char*>(&logged_in), sizeof(logged_in));
-        std::cerr << "[DEBUG] User::serialize done: " << UserName << std::endl;
     }
     void deserialize(std::istream &is) {
-        std::cerr << "[DEBUG] User::deserialize" << std::endl;
         is.read(reinterpret_cast<char*>(&privilege), sizeof(privilege));
         Serializer<String>::read(is, UserName);
         Serializer<String>::read(is, PassWord);
         Serializer<String>::read(is, MailAdr);
         Serializer<String>::read(is, name);
         is.read(reinterpret_cast<char*>(&bought_cnt), sizeof(bought_cnt));
+
+        // Validate bought_cnt to prevent buffer overflow
+        if (!is.good() || bought_cnt < 0 || bought_cnt > MAX_ORDERS) {
+            if (!is.good()) {
+                cerr << "Error: Stream error reading user data for " << UserName << endl;
+            }
+            bought_cnt = 0;  // Reset to safe value
+            is.clear();  // Clear error state
+        }
+
         // Read fixed-size array
         for (int i = 0; i < MAX_ORDERS; i++) {
             Serializer<order>::read(is, bought_tickets[i]);
         }
         is.read(reinterpret_cast<char*>(&logged_in), sizeof(logged_in));
-        std::cerr << "[DEBUG] User::deserialize done: " << UserName << std::endl;
     }
 };
 

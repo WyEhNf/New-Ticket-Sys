@@ -347,6 +347,7 @@ void System::query_ticket() {
         }
         key = input.GetKey();
     }
+    // std::cout<<from_station<<' '<<to_station<<' '<<date<<' '<<(cmp_type==TIME?"time":"price")<<endl;
     if (!ticket_system.query_ticket(from_station, to_station, date, cmp_type))
         throw -1;
 }
@@ -425,12 +426,12 @@ void System::buy_ticket() {
     order temp_order =
         user_system.add_ticket(user_id, ticket, num, result.status);
     if (temp_order == order()) throw -1;
-    if (result.status == "success") {
+    if (result.status[0] == 's') {
         tr.update_seat_res(ticket.from_station, ticket.to_station, ticket.date,
                            num);
         train_system.train_tree.erase(ticket.trainID, tr);
         train_system.train_tree.insert(ticket.trainID, tr);
-    } else if (result.status == "queue") {
+    } else if (result.status[0] == 'q') {
         ticket_system.waiting_list.push_back(temp_order);
     }
     // cout << result.status << endl;
@@ -449,7 +450,7 @@ void System::refund_ticket() {
         }
         key = input.GetKey();
     }
-    --num;
+    // --num;
     order refunded_order = user_system.refund_ticket(user_id, num);
     if (refunded_order == order()) throw -1;
 

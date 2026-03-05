@@ -10,6 +10,7 @@ class Train {
    public:
     static constexpr int MAX_STATIONS = 100;
     static constexpr int MAX_DAYS = 93;  // 6/1 to 8/31 inclusive = 92 days, but use 93 for safety
+    static constexpr int MAX_VECTOR_SIZE = 120;  // Maximum vector size for fixed serialization
 
     char type;
     String ID;
@@ -48,7 +49,14 @@ class Train {
           stations(stations),
           prices(prices),
           travelTimes(travelTimes),
-          stopoverTimes(stopoverTimes) {
+          stopoverTimes(stopoverTimes),
+          released(false),
+          seat_res(nullptr) {
+        // Allocate and initialize seat_res
+        seat_res = new int[MAX_DAYS * (MAX_STATIONS - 1)];
+        for (int i = 0; i < MAX_DAYS * (MAX_STATIONS - 1); i++) {
+            seat_res[i] = 0;
+        }
     }
     Train(const Train& other)
         : type(other.type),
@@ -124,7 +132,7 @@ class Train {
         return !(*this < other);
     }
 
-    // serialization helpers
+    // serialization helpers - FIXED SIZE for B+ tree compatibility
     void serialize(std::ostream &os) const {
         os.write(&type, sizeof(type));
         Serializer<String>::write(os, ID);
@@ -134,15 +142,67 @@ class Train {
         os.write(reinterpret_cast<const char*>(&startTime), sizeof(startTime));
         os.write(reinterpret_cast<const char*>(&sale_begin), sizeof(sale_begin));
         os.write(reinterpret_cast<const char*>(&sale_end), sizeof(sale_end));
-        Serializer<vector<String>>::write(os, stations);
+
+        // Write stations as fixed-size array (MAX_VECTOR_SIZE Strings)
+        size_t sz = stations.size();
+        os.write(reinterpret_cast<const char*>(&sz), sizeof(sz));
+        for (size_t i = 0; i < sz; ++i)
+            Serializer<String>::write(os, stations[i]);
+        // Write padding for remaining slots to ensure fixed size
+        for (size_t i = sz; i < MAX_VECTOR_SIZE; ++i) {
+            String empty;
+            Serializer<String>::write(os, empty);
+        }
+
         // Write seat_res as raw bytes (MAX_DAYS * (MAX_STATIONS - 1) ints)
         int total_size = MAX_DAYS * (MAX_STATIONS - 1);
         os.write(reinterpret_cast<const char*>(seat_res), total_size * sizeof(int));
-        Serializer<vector<int>>::write(os, prices);
-        Serializer<vector<int>>::write(os, travelTimes);
-        Serializer<vector<int>>::write(os, stopoverTimes);
-        Serializer<vector<int>>::write(os, date);
+
+        // Write prices as fixed-size array (MAX_VECTOR_SIZE ints)
+        sz = prices.size();
+        os.write(reinterpret_cast<const char*>(&sz), sizeof(sz));
+        for (size_t i = 0; i < sz; ++i)
+            os.write(reinterpret_cast<const char*>(&prices[i]), sizeof(int));
+        // Padding
+        for (size_t i = sz; i < MAX_VECTOR_SIZE; ++i) {
+            int zero = 0;
+            os.write(reinterpret_cast<const char*>(&zero), sizeof(int));
+        }
+
+        // Write travelTimes as fixed-size array
+        sz = travelTimes.size();
+        os.write(reinterpret_cast<const char*>(&sz), sizeof(sz));
+        for (size_t i = 0; i < sz; ++i)
+            os.write(reinterpret_cast<const char*>(&travelTimes[i]), sizeof(int));
+        // Padding
+        for (size_t i = sz; i < MAX_VECTOR_SIZE; ++i) {
+            int zero = 0;
+            os.write(reinterpret_cast<const char*>(&zero), sizeof(int));
+        }
+
+        // Write stopoverTimes as fixed-size array
+        sz = stopoverTimes.size();
+        os.write(reinterpret_cast<const char*>(&sz), sizeof(sz));
+        for (size_t i = 0; i < sz; ++i)
+            os.write(reinterpret_cast<const char*>(&stopoverTimes[i]), sizeof(int));
+        // Padding
+        for (size_t i = sz; i < MAX_VECTOR_SIZE; ++i) {
+            int zero = 0;
+            os.write(reinterpret_cast<const char*>(&zero), sizeof(int));
+        }
+
+        // Write date as fixed-size array
+        sz = date.size();
+        os.write(reinterpret_cast<const char*>(&sz), sizeof(sz));
+        for (size_t i = 0; i < sz; ++i)
+            os.write(reinterpret_cast<const char*>(&date[i]), sizeof(int));
+        // Padding
+        for (size_t i = sz; i < MAX_VECTOR_SIZE; ++i) {
+            int zero = 0;
+            os.write(reinterpret_cast<const char*>(&zero), sizeof(int));
+        }
     }
+
     void deserialize(std::istream &is) {
         is.read(&type, sizeof(type));
         Serializer<String>::read(is, ID);
@@ -152,14 +212,85 @@ class Train {
         is.read(reinterpret_cast<char*>(&startTime), sizeof(startTime));
         is.read(reinterpret_cast<char*>(&sale_begin), sizeof(sale_begin));
         is.read(reinterpret_cast<char*>(&sale_end), sizeof(sale_end));
-        Serializer<vector<String>>::read(is, stations);
+
+        // Read stations as fixed-size array
+        size_t sz;
+        is.read(reinterpret_cast<char*>(&sz), sizeof(sz));
+        stations.clear();
+        for (size_t i = 0; i < sz; ++i) {
+            String s;
+            Serializer<String>::read(is, s);
+            stations.push_back(s);
+        }
+        // Skip padding
+        for (size_t i = sz; i < MAX_VECTOR_SIZE; ++i) {
+            String s;
+            Serializer<String>::read(is, s);
+        }
+
         // Read seat_res
         int total_size = MAX_DAYS * (MAX_STATIONS - 1);
+        if (seat_res != nullptr) {
+            delete[] seat_res;
+        }
+        seat_res = new int[total_size];
         is.read(reinterpret_cast<char*>(seat_res), total_size * sizeof(int));
-        Serializer<vector<int>>::read(is, prices);
-        Serializer<vector<int>>::read(is, travelTimes);
-        Serializer<vector<int>>::read(is, stopoverTimes);
-        Serializer<vector<int>>::read(is, date);
+
+        // Read prices as fixed-size array
+        is.read(reinterpret_cast<char*>(&sz), sizeof(sz));
+        prices.clear();
+        for (size_t i = 0; i < sz; ++i) {
+            int val;
+            is.read(reinterpret_cast<char*>(&val), sizeof(int));
+            prices.push_back(val);
+        }
+        // Skip padding
+        for (size_t i = sz; i < MAX_VECTOR_SIZE; ++i) {
+            int val;
+            is.read(reinterpret_cast<char*>(&val), sizeof(int));
+        }
+
+        // Read travelTimes as fixed-size array
+        is.read(reinterpret_cast<char*>(&sz), sizeof(sz));
+        travelTimes.clear();
+        for (size_t i = 0; i < sz; ++i) {
+            int val;
+            is.read(reinterpret_cast<char*>(&val), sizeof(int));
+            travelTimes.push_back(val);
+        }
+        // Skip padding
+        for (size_t i = sz; i < MAX_VECTOR_SIZE; ++i) {
+            int val;
+            is.read(reinterpret_cast<char*>(&val), sizeof(int));
+        }
+
+        // Read stopoverTimes as fixed-size array
+        is.read(reinterpret_cast<char*>(&sz), sizeof(sz));
+        stopoverTimes.clear();
+        for (size_t i = 0; i < sz; ++i) {
+            int val;
+            is.read(reinterpret_cast<char*>(&val), sizeof(int));
+            stopoverTimes.push_back(val);
+        }
+        // Skip padding
+        for (size_t i = sz; i < MAX_VECTOR_SIZE; ++i) {
+            int val;
+            is.read(reinterpret_cast<char*>(&val), sizeof(int));
+        }
+
+        // Read date as fixed-size array
+        is.read(reinterpret_cast<char*>(&sz), sizeof(sz));
+        date.clear();
+        for (size_t i = 0; i < sz; ++i) {
+            int val;
+            is.read(reinterpret_cast<char*>(&val), sizeof(int));
+            date.push_back(val);
+        }
+        // Skip padding
+        for (size_t i = sz; i < MAX_VECTOR_SIZE; ++i) {
+            int val;
+            is.read(reinterpret_cast<char*>(&val), sizeof(int));
+        }
     }
     void release() {
         released = true;

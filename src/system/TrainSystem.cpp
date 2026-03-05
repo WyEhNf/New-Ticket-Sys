@@ -33,6 +33,8 @@ bool TrainSystem::release_train(const String& train_id) {
             t.seat_res[day * (Train::MAX_STATIONS - 1) + seg] = t.seatNum;
         }
     }
+    // Initialize date vector for ticket generation
+    t.initialise();
     train_tree.erase(res[0].index, res[0].value);
     train_tree.insert(t.ID, t);
     // std:cerr<<"released train "<<t.ID<<endl;

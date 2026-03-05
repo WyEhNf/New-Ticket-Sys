@@ -6,13 +6,13 @@ namespace sjtu {
 bool UserSystem::add_user(const User& new_user) {
     static int add_cnt = 0;
     add_cnt++;
-    std::cerr << "[DEBUG] add_user #" << add_cnt << ": " << new_user.UserName << std::endl;
+    // std::cerr << "[DEBUG] add_user #" << add_cnt << ": " << new_user.UserName << std::endl;
     auto res = user_tree.find(new_user.UserName);
     if (res.size() != 0) return false;
     // std::cerr<<"adding user "<<new_user.UserName<<endl;
-    std::cerr << "[DEBUG] Before insert for " << new_user.UserName << std::endl;
+    // std::cerr << "[DEBUG] Before insert for " << new_user.UserName << std::endl;
     user_tree.insert(new_user.UserName, new_user);
-    std::cerr << "[DEBUG] After insert for " << new_user.UserName << std::endl;
+    // std::cerr << "[DEBUG] After insert for " << new_user.UserName << std::endl;
     return true;
 }
 bool UserSystem::delete_user(String user_id) {
@@ -90,9 +90,12 @@ order UserSystem::refund_ticket(String user_id, int pos) {
     auto res = user_tree.find(user_id);
     // std::cerr<<"refund find "<<res.size()<<endl;
     if (res.size() == 0) return order();
+    // std::cout<<"reason1"<<endl;
     User u = res[0].value;
     if(!u.logged_in) return order();
+    // std::cout<<"reason2"<<endl;
     if (pos < 1 || pos > u.bought_cnt) return order();
+    // std::cout<<"reason3"<<endl;
     int idx = u.bought_cnt - pos;
     order target = u.bought_tickets[idx];
     std::strcpy(u.bought_tickets[idx].status, "refunded");

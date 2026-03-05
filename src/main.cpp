@@ -21,9 +21,9 @@ int main()
     // cout.tie(0);
     clock_t START=clock();
     // remove_data_file();
-    std::cerr << "Creating system..." << std::endl;
+    // std::cerr << "Creating system..." << std::endl;
     sjtu::System sys("ticket_system");
-    std::cerr << "Running system..." << std::endl;
+    // std::cerr << "Running system..." << std::endl;
     sys.run();
     clock_t END=clock();
     // std::cerr<<"Total Time: "<<(double)(END-START)/CLOCKS_PER_SEC<<'\n';

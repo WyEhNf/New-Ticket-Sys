@@ -1,20 +1,7 @@
-[7] 0
-[17] 0
-[23] I_am_the_admin 奥斯卡 foo@bar.com 10
-[27] 0
-[29] 0
-[39] 0
-[45] 0
-[54] 0
-[56] 0
-[62] 0
-[64] 0
-[67] 0
-[68] 0
-[77] -1
-[82] 0
-[92] 0
-[93] Greyy 格雷伊 Europe.have@entered.into 4
-[96] Blaze 煌煌 All.the.Powers@of.old 4
-[105] Greyy 格雷伊 Europe.have@entered.into 4
-[106] 
+Creating system...
+Creating TicketSystem...
+Creating TrainSystem...
+Creating UserSystem...
+System created
+Running system...
+Assertion failed: las_c_ == '[', file E:\Code\Ticket-System-new\Ticket-System-master\src\parser.cpp, line 14

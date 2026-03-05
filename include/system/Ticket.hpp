@@ -51,14 +51,31 @@ class Ticket {
     bool operator!=(const Ticket& other) const {
         return !(*this == other);
     }
+    // ordering needs to be a strict weak ordering that distinguishes
+    // tickets that belong to the same train (they all have the same
+    // `trainID`).  the previous implementation only compared the train ID
+    // which meant every two Tickets for the same train compared equal.
+    // when the B+‑tree uses `Key::operator<` this led to nodes where
+    // different tickets with the same index were treated as equivalent and
+    // could be scattered across leaves; a subsequent query would stop
+    // scanning as soon as it hit an "older" index and miss later members.
+    //
+    // to avoid that we compare all of the fields that uniquely identify a
+    // ticket.  the index part (date+from_station) is handled by
+    // TicketKey, but the value comparison used by the tree must also be
+    // strict.
     bool operator<(const Ticket& other) const {
-        return trainID < other.trainID;
+        if (trainID != other.trainID) return trainID < other.trainID;
+        if (from_station != other.from_station)
+            return from_station < other.from_station;
+        if (to_station != other.to_station) return to_station < other.to_station;
+        return date < other.date;
     }
     bool operator<=(const Ticket& other) const {
-        return trainID <= other.trainID;
+        return !(other < *this);
     }
     bool operator>(const Ticket& other) const {
-        return !(*this <= other);
+        return other < *this;
     }
     bool operator>=(const Ticket& other) const {
         return !(*this < other);
@@ -127,6 +144,14 @@ class Ticket {
         Serializer<String>::read(is, from_station);
         Serializer<String>::read(is, to_station);
         is.read(reinterpret_cast<char*>(&date), sizeof(date));
+
+        // Validate stream state
+        if (!is.good()) {
+            cerr << "Error: Stream error reading ticket data" << endl;
+            is.clear();
+            time = -1;
+            price = -1;
+        }
     }
 };
 
@@ -170,6 +195,15 @@ class order {
         Serializer<String>::read(is, UserID);
         is.read(status, MAX_STATUS_LEN);
         is.read(reinterpret_cast<char*>(&pos), sizeof(pos));
+
+        // Validate stream state
+        if (!is.good()) {
+            cerr << "Error: Stream error reading order data" << endl;
+            is.clear();
+            num = 0;
+            status[0] = '\0';
+            pos = -1;
+        }
     }
 };
 
