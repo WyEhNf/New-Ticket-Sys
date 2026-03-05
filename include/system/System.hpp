@@ -3,6 +3,7 @@
 #include "TrainSystem.hpp"  
 #include "UserSystem.hpp"
 #include "../parser.hpp"
+#include "../memoryriver/memoryriver.hpp"
 using namespace std;
 namespace sjtu {
     class System {
@@ -12,6 +13,7 @@ namespace sjtu {
         UserSystem user_system;
         Input input;;
         int timestamp=0,user_cnt=0;
+        MemoryRiver<int, 3> system_river;
         vector<String> logged_in_users;
 
     public:

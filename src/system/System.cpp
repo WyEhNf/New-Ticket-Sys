@@ -8,12 +8,11 @@ namespace sjtu {
 System::System(const std::string& name)
     : ticket_system(name + "_ticket_tree.data"),
       train_system(name + "_train_tree.data"),
-      user_system(name + "_user_tree.data") {
-    std::cerr << "Creating TicketSystem..." << std::endl;
-    std::cerr << "Creating TrainSystem..." << std::endl;
-    std::cerr << "Creating UserSystem..." << std::endl;
+      user_system(name + "_user_tree.data"),
+      system_river(name + "_system.data") {
+    system_river.initialise();
+    system_river.get_info(user_cnt, 3);
     Ticket::ptr = &train_system;
-    std::cerr << "System created" << std::endl;
 }
 void System::run() {
     while (!cin.eof()) {
@@ -112,6 +111,7 @@ void System::add_user() {
         user_system.add_user(new_user);
     }
     ++user_cnt;
+    system_river.write_info(user_cnt, 3);
     cout << 0 << endl;
 }
 
@@ -194,18 +194,25 @@ void System::modify_profile() {
     }
     User original_user = user_system.find_user(target_username);
     if (original_user == User()) throw -1;
+    // std::cout<<"have origin"<<std::endl;
     User cur_user = user_system.find_user(cur_username);
     if (cur_user == User()) throw -1;
+    // std::cout<<"have target"<<std::endl;
     if (!cur_user.logged_in) throw -1;
+    // std::cout<<"cur logged in"<<std::endl;
     User target_user = original_user;
     if (isp) target_user.PassWord = tmp.PassWord;
     if (isn) target_user.name = tmp.name;
     if (ism) target_user.MailAdr = tmp.MailAdr;
     if (isg) target_user.privilege = tmp.privilege;
-    if (original_user != target_user &&
-        original_user.privilege <= target_user.privilege)
+    if (original_user != cur_user &&
+        original_user.privilege >= cur_user.privilege)
         throw -1;
-    if (target_user.privilege >= cur_user.privilege) throw -1;
+    // std::cout<<"have privilege"<<std::endl;
+    if (isg&&target_user.privilege >= cur_user.privilege) throw -1;
+
+    // cout<<"Checking privilege: "<<original_user.privilege<<' '
+    //     <<target_user.privilege<<' '<<cur_user.privilege<<endl;
     user_system.modify_user(original_user.UserName, target_user);
     cout << target_user.UserName << ' ' << target_user.name << ' '
          << target_user.MailAdr << ' ' << target_user.privilege << endl;
@@ -516,6 +523,7 @@ void System::query_order() {
 
 void System::clean() {
     user_cnt = 0;
+    system_river.write_info(user_cnt, 3);
     train_system.clean_up();
     user_system.clean_up();
     ticket_system.clean_up();

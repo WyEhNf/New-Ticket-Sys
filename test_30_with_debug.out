@@ -1,0 +1,819 @@
+[DEBUG] Key::serialize called
+[DEBUG] Key::serialize finished
+[DEBUG] Key::serialize called
+[DEBUG] Key::serialize finished
+[DEBUG] Key::serialize called
+[DEBUG] Key::serialize finished
+[DEBUG] Key::serialize called
+[DEBUG] Key::serialize finished
+[DEBUG] Key::serialize called
+[DEBUG] Key::serialize finished
+[DEBUG] Key::serialize called
+[DEBUG] Key::serialize finished
+[DEBUG] Key::serialize called
+[DEBUG] Key::serialize finished
+[DEBUG] Key::serialize called
+[DEBUG] Key::serialize finished
+[DEBUG] Key::serialize called
+[DEBUG] Key::serialize finished
+[DEBUG] Key::serialize called
+[DEBUG] Key::serialize finished
+[DEBUG] Key::serialize called
+[DEBUG] Key::serialize finished
+[DEBUG] Key::serialize called
+[DEBUG] Key::serialize finished
+[DEBUG] Key::serialize called
+[DEBUG] Key::serialize finished
+[DEBUG] Key::serialize called
+[DEBUG] Key::serialize finished
+[DEBUG] Key::serialize called
+[DEBUG] Key::serialize finished
+[DEBUG] Key::serialize called
+[DEBUG] Key::serialize finished
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+Creating TicketSystem...
+Creating TrainSystem...
+Creating UserSystem...
+User count loaded: 38
+System created
+[7] [DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] node() called, pos=1664025
+[DEBUG] node not in cache, reading from river
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] empty Node x created
+[DEBUG] river.read finished
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] node() finished
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] node() called, pos=1536024
+[DEBUG] node not in cache, reading from river
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] empty Node x created
+[DEBUG] river.read finished
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] node() finished
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] node() called, pos=1536024
+[DEBUG] node found in cache
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] cached node copied
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User() constructor called
+-1
+[17] [DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] node() called, pos=1664025
+[DEBUG] node found in cache
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] cached node copied
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] node() called, pos=640017
+[DEBUG] node not in cache, reading from river
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] empty Node x created
+[DEBUG] river.read finished
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] node() finished
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] node() called, pos=640017
+[DEBUG] node found in cache
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] cached node copied
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+-1
+[23] [DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] node() called, pos=1664025
+[DEBUG] node found in cache
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] cached node copied
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] node() called, pos=640017
+[DEBUG] node found in cache
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] cached node copied
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] node() called, pos=640017
+[DEBUG] node found in cache
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] cached node copied
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+-1
+[27] [DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] node() called, pos=1664025
+[DEBUG] node found in cache
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] cached node copied
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] node() called, pos=640017
+[DEBUG] node found in cache
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] cached node copied
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] node() called, pos=640017
+[DEBUG] node found in cache
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] cached node copied
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User() constructor called
+-1
+[29] [DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] node() called, pos=1664025
+[DEBUG] node found in cache
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] cached node copied
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] node() called, pos=1536024
+[DEBUG] node found in cache
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] cached node copied
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] node() called, pos=1536024
+[DEBUG] node found in cache
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] cached node copied
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User() constructor called
+[DEBUG] node() called, pos=1664025
+[DEBUG] node found in cache
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] cached node copied
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] node() called, pos=1536024
+[DEBUG] node found in cache
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] cached node copied
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] node() called, pos=1536024
+[DEBUG] node found in cache
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] cached node copied
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] write_node called, pos=1536024
+[DEBUG] write_node: found in cache
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] node() called, pos=1536024
+[DEBUG] node found in cache
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] cached node copied
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] node() called, pos=-1
+[DEBUG] node not in cache, reading from river
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] empty Node x created
+Error: Stream error reading user data for 
+[DEBUG] river.read finished
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] node() finished
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] node() called, pos=186
+[DEBUG] node not in cache, reading from river
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] empty Node x created
+[DEBUG] river.read finished
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] node() finished
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] node() called, pos=186
+[DEBUG] node found in cache
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] cached node copied
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] node() called, pos=1536024
+[DEBUG] node found in cache
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] cached node copied
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for I_am_the_admin
+[DEBUG] User copy constructor called for Leizi
+[DEBUG] User copy constructor called for Popukar
+[DEBUG] User copy constructor called for Vanilla
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] node() called, pos=0
+[DEBUG] node not in cache, reading from river
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] User() constructor called
+[DEBUG] empty Node x created
+[DEBUG] river.read finished
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] node() finished
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 
+[DEBUG] User copy constructor called for 

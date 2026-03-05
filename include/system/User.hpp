@@ -6,7 +6,7 @@ using namespace std;
 namespace sjtu {
 class User {
    private:
-    static constexpr int MAX_ORDERS = 20;  // Maximum orders per user
+    static constexpr int MAX_ORDERS = 80;  // Maximum orders per user
 
     int privilege;
     String UserName, PassWord, MailAdr;
@@ -100,9 +100,6 @@ class User {
 
         // Validate bought_cnt to prevent buffer overflow
         if (!is.good() || bought_cnt < 0 || bought_cnt > MAX_ORDERS) {
-            if (!is.good()) {
-                cerr << "Error: Stream error reading user data for " << UserName << endl;
-            }
             bought_cnt = 0;  // Reset to safe value
             is.clear();  // Clear error state
         }

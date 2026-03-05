@@ -157,7 +157,7 @@ class MemoryRiver {
 
     void write_info(int x, int n) {
         file.seekp((n - 1) * sizeof(int));
-        file.write(reinterpret_cast<char*>(&x), sizeof(x));
+        file.write(reinterpret_cast<char*>(&x), sizeof(int));
     }
 
     int write(const T& t) {

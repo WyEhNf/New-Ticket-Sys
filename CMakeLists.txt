@@ -23,3 +23,13 @@ src/system/UserSystem.cpp
 src/parser.cpp
 src/main.cpp)
 
+# 设置栈大小（Windows MSVC）
+# 统一设置栈大小 (1GB)
+set(EXE_STACK_SIZE 1073741824)
+
+if(MSVC)
+    set_target_properties(code PROPERTIES LINK_FLAGS "/STACK:${EXE_STACK_SIZE}")
+elseif(MINGW OR GNUC)
+    target_link_options(code PRIVATE "-Wl,--stack,1073741824")
+endif()
+

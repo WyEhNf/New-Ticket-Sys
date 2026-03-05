@@ -1,0 +1,1 @@
+add_user -u test -p test -n test -m test@test.com -c test -g 10  

@@ -60,10 +60,10 @@ class BPlusTree {
         // serialization helpers required when ValueType/IndexType are
         // themselves non‑trivial.  MemoryRiver will dispatch to these via
         // the Serializer<T> trait defined in memoryriver.hpp.
-        void serialize(std::ostream &os) const {
-            Serializer<IndexType>::write(os, index);
-            Serializer<ValueType>::write(os, value);
-        }
+    void serialize(std::ostream &os) const {
+        Serializer<IndexType>::write(os, index);
+        Serializer<ValueType>::write(os, value);
+    }
         void deserialize(std::istream &is) {
             Serializer<IndexType>::read(is, index);
             Serializer<ValueType>::read(is, value);
@@ -245,7 +245,9 @@ class BPlusTree {
         x.keys[i] = key;
         x.key_cnt++;
         write_node(x, u);
-        if (x.key_cnt == ORDER) split_leaf(u);
+        if (x.key_cnt == ORDER) {
+            split_leaf(u);
+        }
     }
 
     void split_leaf(int u) {
