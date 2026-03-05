@@ -6,7 +6,7 @@ namespace sjtu{
     class UserSystem
     {
         private:
-            BPlusTree<String,User> user_tree;
+            BPlusTree<String,User,4> user_tree;
             friend class System;
         public:
             UserSystem(string filename="user_tree.data"): user_tree(filename) {}
