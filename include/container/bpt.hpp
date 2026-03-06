@@ -123,7 +123,7 @@ class BPlusTree {
         int pos;
     };
 
-    static constexpr int CACHE_CAPACITY = 120;
+    static constexpr int CACHE_CAPACITY = 50;
 
     std::list<CacheBlock> cache_list;
     map<int, typename std::list<CacheBlock>::iterator> cache_map;
@@ -560,20 +560,33 @@ class BPlusTree {
         if (u != root() && x.key_cnt < min_leaf_keys()) fix_leaf(u);
     }
 
-    // Direct update: find and replace value in place
+    // Direct update: find by idx and replace value in place
     // Returns true if found and updated, false otherwise
     bool update(const IndexType& idx, const ValueType& old_val, const ValueType& new_val) {
-        Key old_key{}, new_key{};
-        old_key.index = idx;
-        old_key.value = old_val;
-        new_key.index = idx;
-        new_key.value = new_val;
+        // Find all keys with this index
+        vector<Key> keys = find(idx);
+        if (keys.size() == 0) return false;
 
-        int u = find_leaf(old_key);
+        // Find the matching key by old_val
+        int found_pos = -1;
+        for (int i = 0; i < keys.size(); i++) {
+            if (keys[i].value == old_val) {
+                found_pos = i;
+                break;
+            }
+        }
+        if (found_pos == -1) return false;
+
+        // Now find and update this specific key
+        Key target_key{};
+        target_key.index = idx;
+        target_key.value = old_val;
+
+        int u = find_leaf(target_key);
         Node x = node(u);
 
         for (int i = 0; i < x.key_cnt; i++) {
-            if (x.keys[i] == old_key) {
+            if (x.keys[i] == target_key) {
                 x.keys[i].value = new_val;
                 write_node(x, u);
                 return true;
