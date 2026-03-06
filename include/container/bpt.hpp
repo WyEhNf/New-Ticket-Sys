@@ -31,7 +31,7 @@ using namespace std;
 // ---------------------------------------------------------------------------
 
 namespace sjtu {
-template <typename IndexType, typename ValueType, int ORDER = 8>
+template <typename IndexType, typename ValueType, int ORDER = 16>
 class BPlusTree {
    public:
     // require that the template parameters can be persisted by our
