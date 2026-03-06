@@ -188,6 +188,7 @@ class BPlusTree {
         return x;
     }
 
+   public:
     void flush_all() {
         for (auto& block : cache_list) {
             if (block.dirty) {
@@ -197,6 +198,7 @@ class BPlusTree {
         }
     }
 
+   private:
     int min_leaf_keys() const {
         return (ORDER + 1) / 2;
     }

@@ -111,7 +111,7 @@ class MemoryRiver {
     char* buffer;
 
    public:
-    MemoryRiver() = default;
+    MemoryRiver() : buffer(nullptr) {}
     MemoryRiver(const string& fn) : file_name(fn), buffer(nullptr) {
         buffer = new char[BUFFER_SIZE];
     }
@@ -120,7 +120,9 @@ class MemoryRiver {
             file.flush();
             file.close();
         }
-        delete[] buffer;
+        if (buffer) {
+            delete[] buffer;
+        }
     }
 
     void initialise(string fn = "") {
@@ -155,9 +157,10 @@ class MemoryRiver {
             }
         }
         file.open(file_name, ios::binary | ios::in | ios::out);
-        if (buffer) {
-            file.rdbuf()->pubsetbuf(buffer, BUFFER_SIZE);
+        if (!buffer) {
+            buffer = new char[BUFFER_SIZE];
         }
+        file.rdbuf()->pubsetbuf(buffer, BUFFER_SIZE);
     }
 
     void get_info(int& x, int n) {

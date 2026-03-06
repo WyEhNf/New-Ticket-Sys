@@ -22,6 +22,6 @@ namespace sjtu{
         User modify_user(String user_id, const User& new_user);
         void modify_order(order &o,string new_sta);
         void clean_up();
-
+        void flush_all();
     };
 }

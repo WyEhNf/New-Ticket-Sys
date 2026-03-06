@@ -45,5 +45,8 @@ bool TrainSystem::release_train(const String& train_id) {
 void TrainSystem::clean_up() {
     train_tree.clean_up();
 }
+void TrainSystem::flush_all() {
+    train_tree.flush_all();
+}
 // namespace sjtu
 }

@@ -59,5 +59,6 @@ namespace sjtu {
         static bool Compare_with_time(BPlusTree<TicketKey, Ticket>::Key &A, BPlusTree<TicketKey, Ticket>::Key &B);
         void printTicket(Ticket t, String from_station, String to_station);
         void clean_up();
+        void flush_all();
     };
 }

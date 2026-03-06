@@ -114,5 +114,8 @@ void UserSystem::modify_order(order &o,string new_sta){
 }
 void UserSystem::clean_up() {
     user_tree.clean_up();
-} 
+}
+void UserSystem::flush_all() {
+    user_tree.flush_all();
+}
 } // namespace sjtu

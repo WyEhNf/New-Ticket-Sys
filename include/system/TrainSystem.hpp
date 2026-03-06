@@ -17,7 +17,7 @@ class TrainSystem {
     Train find_train(const String& train_id);
     bool release_train(const String& train_id);
     void clean_up();
-   
+    void flush_all();
 
 };
 }  // namespace sjtu

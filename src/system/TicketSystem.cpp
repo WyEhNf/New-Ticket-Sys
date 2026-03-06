@@ -189,4 +189,7 @@ bool TicketSystem::buy_ticket(Train &tr, Ticket& ticket, int num, bool if_wait,
 void TicketSystem::clean_up() {
     ticket_tree.clean_up();
 }
+void TicketSystem::flush_all() {
+    ticket_tree.flush_all();
+}
 }  // namespace sjtu
