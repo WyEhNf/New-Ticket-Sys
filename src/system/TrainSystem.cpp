@@ -11,7 +11,7 @@ bool TrainSystem::delete_train(const String& train_id) {
     auto res = train_tree.find(train_id);
     if (res.size() == 0) return false;
     if(res[0].value.released) return false;
-    train_tree.erase(res[0].index, res[0].value);
+    train_tree.erase(train_id, res[0].value);
     return true;
 }
 Train TrainSystem::find_train(const String& train_id) {
@@ -35,11 +35,8 @@ bool TrainSystem::release_train(const String& train_id) {
     }
     // Initialize date vector for ticket generation
     t.initialise();
-    train_tree.erase(res[0].index, res[0].value);
-    train_tree.insert(t.ID, t);
+    train_tree.update(t.ID, res[0].value, t);
     // std:cerr<<"released train "<<t.ID<<endl;
-    Train check = find_train(train_id);
-    // std::cerr<<"check released "<<check.ID<<' '<<check.released<<endl;
     return true;
 }
 void TrainSystem::clean_up() {

@@ -30,8 +30,7 @@ bool UserSystem::login(String user_id, String password) {
     if (u.PassWord != password) return false;
     if (u.logged_in) return false;
     u.logged_in = true;
-    user_tree.erase(res[0].index, res[0].value);
-    user_tree.insert(u.UserName, u);
+    user_tree.update(u.UserName, u, u);
     return true;
 }
 bool UserSystem::logout(String user_id) {
@@ -40,8 +39,7 @@ bool UserSystem::logout(String user_id) {
     User u = res[0].value;
     if (!u.logged_in) return false;
     u.logged_in = false;
-    user_tree.erase(res[0].index, res[0].value);
-    user_tree.insert(u.UserName, u);
+    user_tree.update(u.UserName, u, u);
     return true;
 }
 User UserSystem::find_user(String user_id) {
@@ -53,8 +51,7 @@ User UserSystem::find_user(String user_id) {
 User UserSystem::modify_user(String user_id, const User& new_user) {
     auto res = user_tree.find(user_id);
     if (res.size() == 0) return User();
-    user_tree.erase(res[0].index, res[0].value);
-    user_tree.insert(new_user.UserName, new_user);
+    user_tree.update(user_id, res[0].value, new_user);
     return new_user;
 }
 bool UserSystem::query_ordered_tickets(const String& user_id) {
@@ -82,8 +79,7 @@ order UserSystem::add_ticket(String user_id, const Ticket& ticket,int num,string
     u.bought_tickets[u.bought_cnt] = new_order;
     u.bought_tickets[u.bought_cnt].pos = u.bought_cnt;
     u.bought_cnt++;
-    user_tree.erase(res[0].index, res[0].value);
-    user_tree.insert(u.UserName, u);
+    user_tree.update(u.UserName, res[0].value, u);
     return u.bought_tickets[u.bought_cnt-1];
 }
 order UserSystem::refund_ticket(String user_id, int pos) {
@@ -99,8 +95,7 @@ order UserSystem::refund_ticket(String user_id, int pos) {
     int idx = u.bought_cnt - pos;
     order target = u.bought_tickets[idx];
     std::strcpy(u.bought_tickets[idx].status, "refunded");
-    user_tree.erase(res[0].index, res[0].value);
-    user_tree.insert(u.UserName, u);
+    user_tree.update(u.UserName, res[0].value, u);
     return target;
 }
 void UserSystem::modify_order(order &o,string new_sta){
@@ -109,8 +104,7 @@ void UserSystem::modify_order(order &o,string new_sta){
     // std::cerr<<o.pos<<endl;
     User u = res[0].value;
     std::strcpy(u.bought_tickets[o.pos].status, new_sta.c_str());
-    user_tree.erase(res[0].index, res[0].value);
-    user_tree.insert(u.UserName, u);
+    user_tree.update(o.UserID, res[0].value, u);
 }
 void UserSystem::clean_up() {
     user_tree.clean_up();

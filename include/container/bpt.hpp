@@ -560,6 +560,28 @@ class BPlusTree {
         if (u != root() && x.key_cnt < min_leaf_keys()) fix_leaf(u);
     }
 
+    // Direct update: find and replace value in place
+    // Returns true if found and updated, false otherwise
+    bool update(const IndexType& idx, const ValueType& old_val, const ValueType& new_val) {
+        Key old_key{}, new_key{};
+        old_key.index = idx;
+        old_key.value = old_val;
+        new_key.index = idx;
+        new_key.value = new_val;
+
+        int u = find_leaf(old_key);
+        Node x = node(u);
+
+        for (int i = 0; i < x.key_cnt; i++) {
+            if (x.keys[i] == old_key) {
+                x.keys[i].value = new_val;
+                write_node(x, u);
+                return true;
+            }
+        }
+        return false;
+    }
+
     vector<Key> find(const IndexType& idx) {
         Key low{};
         low.index = idx;
