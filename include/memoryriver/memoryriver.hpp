@@ -107,13 +107,20 @@ class MemoryRiver {
     fstream file;
     string file_name;
     static constexpr int CURRENT_VERSION = 1;  // Current serialization version
+    static constexpr size_t BUFFER_SIZE = 64 * 1024;  // 64KB buffer
+    char* buffer;
 
    public:
     MemoryRiver() = default;
-    MemoryRiver(const string& fn) : file_name(fn) {
+    MemoryRiver(const string& fn) : file_name(fn), buffer(nullptr) {
+        buffer = new char[BUFFER_SIZE];
     }
     ~MemoryRiver() {
-        if (file.is_open()) file.close();
+        if (file.is_open()) {
+            file.flush();
+            file.close();
+        }
+        delete[] buffer;
     }
 
     void initialise(string fn = "") {
@@ -148,6 +155,9 @@ class MemoryRiver {
             }
         }
         file.open(file_name, ios::binary | ios::in | ios::out);
+        if (buffer) {
+            file.rdbuf()->pubsetbuf(buffer, BUFFER_SIZE);
+        }
     }
 
     void get_info(int& x, int n) {

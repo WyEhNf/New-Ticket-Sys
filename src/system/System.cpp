@@ -58,6 +58,10 @@ void System::run() {
                 }
                 logged_in_users.clear();
                 std::cout << "bye" << std::endl;
+                // Flush all cached data before exit
+                ticket_system.flush_all();
+                train_system.flush_all();
+                user_system.flush_all();
                 break;
             }else if(command=="test"){
                 // for testing purpose

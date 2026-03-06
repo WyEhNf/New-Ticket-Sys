@@ -4,6 +4,7 @@
 #include "map.hpp"
 #include "vector.hpp"
 #include "String.hpp"
+#include <list>
 
 
 using namespace std;
@@ -122,21 +123,18 @@ class BPlusTree {
         int pos;
     };
 
-    static constexpr int CACHE_CAPACITY = 250;
+    static constexpr int CACHE_CAPACITY = 120;
 
-    list<CacheBlock> cache_list;
-    map<int, typename list<CacheBlock>::iterator> cache_map;
+    std::list<CacheBlock> cache_list;
+    map<int, typename std::list<CacheBlock>::iterator> cache_map;
 
     Node node(int pos) {
         auto map_it = cache_map.find(pos);
         if (map_it != cache_map.end()) {
             auto old_list_it = map_it->second;
-            Node current_node = old_list_it->node;
-            bool current_dirty = old_list_it->dirty;
-            cache_list.erase(old_list_it);
-            cache_list.push_front({current_node, current_dirty, pos});
-            cache_map[pos] = cache_list.begin();
-            return current_node;
+            // Move the node to front without copying
+            cache_list.splice(cache_list.begin(), cache_list, old_list_it);
+            return old_list_it->node;
         }
         Node x;
         river.read(x, pos);
@@ -157,9 +155,9 @@ class BPlusTree {
         auto map_it = cache_map.find(pos);
         if (map_it != cache_map.end()) {
             auto old_list_it = map_it->second;
-            bool current_dirty = old_list_it->dirty;
-            cache_list.erase(old_list_it);
-            cache_list.push_front({x, true, pos});
+            old_list_it->node = x;
+            old_list_it->dirty = true;
+            cache_list.splice(cache_list.begin(), cache_list, old_list_it);
             cache_map[pos] = cache_list.begin();
         } else {
             if (cache_list.size() >= CACHE_CAPACITY) {
