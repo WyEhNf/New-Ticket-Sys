@@ -11,7 +11,7 @@ bool TrainSystem::delete_train(const String& train_id) {
     auto res = train_tree.find(train_id);
     if (res.size() == 0) return false;
     if(res[0].value.released) return false;
-    train_tree.erase(train_id, res[0].value);
+    train_tree.erase(res[0].index, res[0].value);
     return true;
 }
 Train TrainSystem::find_train(const String& train_id) {

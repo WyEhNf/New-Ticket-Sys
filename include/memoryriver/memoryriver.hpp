@@ -107,7 +107,7 @@ class MemoryRiver {
     fstream file;
     string file_name;
     static constexpr int CURRENT_VERSION = 1;  // Current serialization version
-    static constexpr size_t BUFFER_SIZE = 16 * 1024;  // 16KB buffer
+    static constexpr size_t BUFFER_SIZE = 48 * 1024;  // 48KB buffer
     char* buffer;
 
    public:

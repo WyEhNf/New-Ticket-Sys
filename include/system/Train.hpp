@@ -9,8 +9,8 @@ namespace sjtu {
 class Train {
    public:
     static constexpr int MAX_STATIONS = 100;
-    static constexpr int MAX_DAYS = 93;  // 6/1 to 8/31 inclusive = 92 days, but use 93 for safety
-    static constexpr int MAX_VECTOR_SIZE = 120;  // Maximum vector size for fixed serialization
+    static constexpr int MAX_DAYS = 92;  // 6/1 to 8/31 inclusive = 92 days
+    static constexpr int MAX_VECTOR_SIZE = 100;  // Reduced from 120 to save memory
 
     char type;
     String ID;

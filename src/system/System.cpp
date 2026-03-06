@@ -275,9 +275,8 @@ void System::release_train() {
     // std::cerr<<"releasing train "<<train_id<<endl;
     if (!train_system.release_train(train_id)) throw -1;
     // std::cerr << "released\n";
-    Train new_t = train_system.find_train(train_id);
-    ticket_system.add_ticket(new_t);
-    // std::cerr<<"wtf\n";
+    // 优化：直接使用已查询的 t 对象，避免重复find
+    ticket_system.add_ticket(t);
     cout << 0 << endl;
 }
 
@@ -506,6 +505,7 @@ void System::refund_ticket() {
         // '<<result.ticket.from_station<<' '<<result.ticket.to_station<<'
         // '<<result.ticket.date<<endl;
         user_system.modify_order(result, "success");
+        // 优化：需要重新查询Train来获取最新状态
         Train tr = train_system.find_train(result.ticket.trainID);
         tr.update_seat_res(result.ticket.from_station, result.ticket.to_station,
                            result.ticket.date, result.num);

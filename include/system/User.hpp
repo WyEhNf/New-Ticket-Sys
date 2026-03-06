@@ -6,7 +6,7 @@ using namespace std;
 namespace sjtu {
 class User {
    private:
-    static constexpr int MAX_ORDERS = 40;  // Maximum orders per user
+    static constexpr int MAX_ORDERS = 40;  // Reduced from 40 to save memory
 
     int privilege;
     String UserName, PassWord, MailAdr;

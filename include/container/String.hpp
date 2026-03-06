@@ -5,7 +5,7 @@
 using namespace std;
 #include "../memoryriver/memoryriver.hpp"  // for Serializer
 struct String {
-    static constexpr size_t MAX_LEN = 100;
+    static constexpr size_t MAX_LEN = 70;
     char s[MAX_LEN + 1];
     String() {
         s[0] = '\0';

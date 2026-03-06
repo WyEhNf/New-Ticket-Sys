@@ -123,7 +123,7 @@ class BPlusTree {
         int pos;
     };
 
-    static constexpr int CACHE_CAPACITY = 35;
+    static constexpr int CACHE_CAPACITY = 70;
 
     std::list<CacheBlock> cache_list;
     map<int, typename std::list<CacheBlock>::iterator> cache_map;
