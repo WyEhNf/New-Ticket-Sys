@@ -5,7 +5,7 @@ using namespace std;
 namespace sjtu {
 class TrainSystem {
    private:
-    BPlusTree<String, Train,5> train_tree;
+    BPlusTree<String, Train> train_tree;
     friend class Ticket;
     friend class TicketSystem;
     friend class System;
