@@ -442,7 +442,7 @@ void System::buy_ticket() {
                            num);
         train_system.train_tree.erase(ticket.trainID, tr);
         train_system.train_tree.insert(ticket.trainID, tr);
-    } else if (result.status[0] == 'q') {
+    } else if (result.status[0] == 'p') {
         ticket_system.waiting_list.push_back(temp_order);
     }
     // cout << result.status << endl;
