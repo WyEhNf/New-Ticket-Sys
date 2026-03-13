@@ -41,6 +41,7 @@ namespace sjtu {
         };
         BPlusTree<TicketKey, Ticket> ticket_tree;
         vector<order> waiting_list;
+        BPlusTree<int, order> waiting_idx_tree;  // Index waiting_list by UserID for fast lookup
         TrainSystem* train_system_ptr;
         friend class System;
 

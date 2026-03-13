@@ -4,15 +4,9 @@ using namespace std;
 namespace sjtu {
 
 bool UserSystem::add_user(const User& new_user) {
-    static int add_cnt = 0;
-    add_cnt++;
-    // std::cerr << "[DEBUG] add_user #" << add_cnt << ": " << new_user.UserName << std::endl;
     auto res = user_tree.find(new_user.UserName);
     if (res.size() != 0) return false;
-    // std::cerr<<"adding user "<<new_user.UserName<<endl;
-    // std::cerr << "[DEBUG] Before insert for " << new_user.UserName << std::endl;
     user_tree.insert(new_user.UserName, new_user);
-    // std::cerr << "[DEBUG] After insert for " << new_user.UserName << std::endl;
     return true;
 }
 bool UserSystem::delete_user(String user_id) {
@@ -23,9 +17,7 @@ bool UserSystem::delete_user(String user_id) {
 }
 bool UserSystem::login(String user_id, String password) {
     auto res = user_tree.find(user_id);
-    // std::cerr<<"USR FIND "<<res.size()<<endl;
     if (res.size() == 0) return false;
-    // std::cerr<<"found user "<<res[0].value.UserName<<' '<<res[0].value.PassWord<<endl;
     User u = res[0].value;
     if (u.PassWord != password) return false;
     if (u.logged_in) return false;
@@ -84,14 +76,10 @@ order UserSystem::add_ticket(String user_id, const Ticket& ticket,int num,string
 }
 order UserSystem::refund_ticket(String user_id, int pos) {
     auto res = user_tree.find(user_id);
-    // std::cerr<<"refund find "<<res.size()<<endl;
     if (res.size() == 0) return order();
-    // std::cout<<"reason1"<<endl;
     User u = res[0].value;
     if(!u.logged_in) return order();
-    // std::cout<<"reason2"<<endl;
     if (pos < 1 || pos > u.bought_cnt) return order();
-    // std::cout<<"reason3"<<endl;
     int idx = u.bought_cnt - pos;
     order target = u.bought_tickets[idx];
     std::strcpy(u.bought_tickets[idx].status, "refunded");
@@ -101,7 +89,6 @@ order UserSystem::refund_ticket(String user_id, int pos) {
 void UserSystem::modify_order(order &o,string new_sta){
     auto res = user_tree.find(o.UserID);
     if (res.size() == 0) return;
-    // std::cerr<<o.pos<<endl;
     User u = res[0].value;
     std::strcpy(u.bought_tickets[o.pos].status, new_sta.c_str());
     user_tree.update(o.UserID, res[0].value, u);

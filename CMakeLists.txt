@@ -32,4 +32,3 @@ if(MSVC)
 elseif(MINGW OR GNUC)
     target_link_options(code PRIVATE "-Wl,--stack,1073741824")
 endif()
-

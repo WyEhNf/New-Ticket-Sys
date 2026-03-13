@@ -14,18 +14,7 @@ void remove_data_file() {
 }
 int main()
 {
-    // setlocale(LC_ALL, "zh_CN.UTF-8");
-    // freopen("8.in","r",stdin);
-    // ios::sync_with_stdio(false);
-    // cin.tie(0);
-    // cout.tie(0);
-    clock_t START=clock();
-    // remove_data_file();
-    // std::cerr << "Creating system..." << std::endl;
     sjtu::System sys("ticket_system");
-    // std::cerr << "Running system..." << std::endl;
     sys.run();
-    clock_t END=clock();
-    // std::cerr<<"Total Time: "<<(double)(END-START)/CLOCKS_PER_SEC<<'\n';
     return 0;
 }

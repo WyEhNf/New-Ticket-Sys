@@ -104,10 +104,22 @@ class Ticket {
             if (train.stations[i] == from_station) from_index = i;
             if (train.stations[i] == to_station) to_index = i;
         }
+        
+        // 边界检查
+        if (from_index == -1 || to_index == -1 || from_index >= to_index) {
+            time = -1;
+            return -1;
+        }
+        
         int total_time = train.startTime;
         for (int i = 1; i < to_index; i++) {
-            total_time += train.travelTimes[i - 1];
-            if (i <= from_index) total_time += train.stopoverTimes[i - 1];
+            // 确保不会越界访问
+            if (i - 1 < train.travelTimes.size()) {
+                total_time += train.travelTimes[i - 1];
+            }
+            if (i <= from_index && i - 1 < train.stopoverTimes.size()) {
+                total_time += train.stopoverTimes[i - 1];
+            }
         }
         time=total_time;
         return total_time;

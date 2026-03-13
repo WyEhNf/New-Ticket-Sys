@@ -291,6 +291,10 @@ class Train {
             int val;
             is.read(reinterpret_cast<char*>(&val), sizeof(int));
         }
+        // 如果date向量为空，则调用initialise()计算
+        if (date.empty()) {
+            initialise();
+        }
     }
     void release() {
         released = true;
@@ -305,9 +309,6 @@ class Train {
             if (stations[i] == from_station) from = i;
             if (stations[i] == to_station) to = i;
         }
-        // std::cerr<<from<<' '<<to<<'\n';
-        // std::cerr<<day_index<<'\n';
-        // std::cerr << "get_seat_res " << from << ' ' << to << ' ' << day_index << endl;
         int min_seat = seat_res[day_index * (MAX_STATIONS - 1) + from];
         for (int i = from; i < to; i++) {
             if (seat_res[day_index * (MAX_STATIONS - 1) + i] < min_seat)
@@ -349,7 +350,6 @@ class Train {
         int time = startTime;
         if (stations[0] == station) return realTime(time, date);
         for (int i = 1; i < stationNum; i++) {
-            // std::cerr<<"station "<<stations[i]<<endl;
             time += travelTimes[i - 1];
             if (stations[i] == station&&!isArrive) return realTime(time, date);
             if (i != stationNum - 1) time += stopoverTimes[i - 1];

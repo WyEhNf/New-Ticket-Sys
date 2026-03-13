@@ -24,7 +24,6 @@ bool TrainSystem::release_train(const String& train_id) {
     auto res = train_tree.find(train_id);
     if (res.size() == 0) return false;
     Train t = res[0].value;
-    // std::cerr<<t.ID<<' '<<t.released<<endl;
     if (t.released) return false;
     t.released = true;
     // Initialize seat_res with seatNum for each day and segment
@@ -36,7 +35,6 @@ bool TrainSystem::release_train(const String& train_id) {
     // Initialize date vector for ticket generation
     t.initialise();
     train_tree.update(t.ID, res[0].value, t);
-    // std:cerr<<"released train "<<t.ID<<endl;
     return true;
 }
 void TrainSystem::clean_up() {

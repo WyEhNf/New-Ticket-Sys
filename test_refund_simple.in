@@ -1,0 +1,9 @@
+add_train -i LeavesofGrass -n 18 -m 10 -x sale_date:06-20 07:38 -e sale_date:07-21 23:59 -p 新疆塔城市 xx-xx xx:xx 07:38 浙江省平湖市 08:52 08:59 浙江省杭州市 11:46 11:52 辽宁省抚顺市 14:21 14:24 广东省四会市 15:34 15:39 湖南省衡阳市 16:17 16:20 陕西省安康市 17:15 17:25 河北省河间市 18:01 18:11 宁夏石嘴山市 19:18 19:25 福建省建阳市 21:14 21:19 黑龙江省海林市 22:46 22:56 河南省灵宝市 23:39 23:45 广东省花都市 06-29 01:39 01:43 河南省偃师市 03:28 03:31 新疆博乐市 06:04 06:11 新疆伊宁市 08:52 08:57 浙江省慈溪市 09:48 xx-xx xx:xx -q 291 400 402 5 114 98 525 221 236 400 229 100 232 419 402 70
+release_train -i LeavesofGrass
+add_user -u Bagpipe -p test -n test -m test -g 0
+login -u Bagpipe -p test
+buy_ticket -i LeavesofGrass -u Bagpipe -f 广东省四会市 -t 河南省偃师市 -d 06-28 -n 3181 -q false
+query_train -i LeavesofGrass -d 06-28
+refund_ticket -u Bagpipe -n 1
+query_train -i LeavesofGrass -d 06-28
+exit

@@ -4,7 +4,7 @@
 
 using namespace std;
 namespace sjtu {
-    TrainSystem* Ticket::ptr = nullptr;
+TrainSystem* Ticket::ptr = nullptr;
 System::System(const std::string& name)
     : ticket_system(name + "_ticket_tree.data"),
       train_system(name + "_train_tree.data"),
@@ -51,9 +51,7 @@ void System::run() {
             } else if (command == "clean") {
                 clean();
             } else if (command == "exit") {
-
-                for(auto &user_id: logged_in_users)
-                {
+                for (auto& user_id : logged_in_users) {
                     user_system.logout(user_id);
                 }
                 logged_in_users.clear();
@@ -63,10 +61,9 @@ void System::run() {
                 train_system.flush_all();
                 user_system.flush_all();
                 break;
-            }else if(command=="test"){
+            } else if (command == "test") {
                 // for testing purpose
-                for(auto &user_id: logged_in_users)
-                {
+                for (auto& user_id : logged_in_users) {
                     user_system.logout(user_id);
                 }
                 logged_in_users.clear();
@@ -84,7 +81,6 @@ void System::add_user() {
     while (key != '\n') {
         String str;
         if (key != 'g') str = input.GetString();
-        // std::cerr<<"key: "<<key<<std::endl;
         if (key == 'u') {
             new_user.UserName = str;
         } else if (key == 'i') {
@@ -213,7 +209,7 @@ void System::modify_profile() {
         original_user.privilege >= cur_user.privilege)
         throw -1;
     // std::cout<<"have privilege"<<std::endl;
-    if (isg&&target_user.privilege >= cur_user.privilege) throw -1;
+    if (isg && target_user.privilege >= cur_user.privilege) throw -1;
 
     // cout<<"Checking privilege: "<<original_user.privilege<<' '
     //     <<target_user.privilege<<' '<<cur_user.privilege<<endl;
@@ -228,7 +224,6 @@ void System::add_train() {
     while (key != '\n') {
         String str;
         int num;
-        // cerr<<"key: "<<key<<std::endl;
         if (key == 'i') {
             new_train.ID = input.GetString();
         } else if (key == 'n') {
@@ -255,7 +250,6 @@ void System::add_train() {
         key = input.GetKey();
     }
     new_train.initialise();
-    // std::cerr<<"QUES??:"<<new_train.seatNum<<'\n';
     if (!train_system.add_train(new_train)) throw -1;
     cout << 0 << endl;
 }
@@ -301,7 +295,7 @@ void System::query_train() {
     // std::cerr<<date<<'\n';
     // std::cerr<<"station num:"<<train.stationNum<<'
     // '<<train.stopoverTimes.size()<<endl;
-    cout<<train.ID<<' '<<train.type<<endl;
+    cout << train.ID << ' ' << train.type << endl;
     for (int i = 0; i < train.stationNum; i++) {
         String arr_time, leave_time;
         if (i == 0)
@@ -321,11 +315,14 @@ void System::query_train() {
             time += train.stopoverTimes[i - 1];
         }
         // std::cerr<<"OK!"<<train.stations[i]<<endl;
-        int res_seat ;
-        if(i == train.stationNum - 1)res_seat=0;
-        else if(!train.is_released()) res_seat=train.seatNum;
-        else res_seat=train.get_seat_res(train.stations[i],
-                                                train.stations[i + 1], date);
+        int res_seat;
+        if (i == train.stationNum - 1)
+            res_seat = 0;
+        else if (!train.is_released())
+            res_seat = train.seatNum;
+        else
+            res_seat = train.get_seat_res(train.stations[i],
+                                          train.stations[i + 1], date);
         // cerr<<"HERE!\n";
         cout << train.stations[i] << ' ' << arr_time << " -> " << leave_time
              << ' ' << price << ' ';
@@ -357,7 +354,8 @@ void System::query_ticket() {
         }
         key = input.GetKey();
     }
-    // std::cout<<from_station<<' '<<to_station<<' '<<date<<' '<<(cmp_type==TIME?"time":"price")<<endl;
+    // std::cout<<from_station<<' '<<to_station<<' '<<date<<'
+    // '<<(cmp_type==TIME?"time":"price")<<endl;
     if (!ticket_system.query_ticket(from_station, to_station, date, cmp_type))
         throw -1;
 }
@@ -423,23 +421,23 @@ void System::buy_ticket() {
     order result(ticket, num, user_id, "");
     // std::cerr<<"here\n";
     Train tr = train_system.find_train(ticket.trainID);
-    int pos=-1;
-    for(int i=0;i<tr.stationNum-1;i++)
-    {
-        if(tr.stations[i]==ticket.from_station) pos=i;
+    int pos = -1;
+    for (int i = 0; i < tr.stationNum - 1; i++) {
+        if (tr.stations[i] == ticket.from_station) pos = i;
     }
-    if(pos==-1) throw -1;
+    if (pos == -1) throw -1;
     // cerr<<"!!"<<pos<<'\n';
-    ticket.date-=tr.date[pos];
+    ticket.date -= tr.date[pos];
     if (!ticket_system.buy_ticket(tr, ticket, num, if_wait, result, user_id))
         throw -1;
     order temp_order =
         user_system.add_ticket(user_id, ticket, num, result.status);
     if (temp_order == order()) throw -1;
     if (result.status[0] == 's') {
+        train_system.train_tree.erase(ticket.trainID, tr);
         tr.update_seat_res(ticket.from_station, ticket.to_station, ticket.date,
                            num);
-        train_system.train_tree.erase(ticket.trainID, tr);
+       
         train_system.train_tree.insert(ticket.trainID, tr);
     } else if (result.status[0] == 'p') {
         ticket_system.waiting_list.push_back(temp_order);
@@ -467,10 +465,10 @@ void System::refund_ticket() {
     // std::cerr<<"here\n";
     user_system.modify_order(refunded_order, "refunded");
     Train refund_train = train_system.find_train(refunded_order.ticket.trainID);
+    train_system.train_tree.erase(refunded_order.ticket.trainID, refund_train);
     refund_train.update_seat_res(
         refunded_order.ticket.from_station, refunded_order.ticket.to_station,
         refunded_order.ticket.date, -refunded_order.num);
-    train_system.train_tree.erase(refunded_order.ticket.trainID, refund_train);
     train_system.train_tree.insert(refunded_order.ticket.trainID, refund_train);
     // order result =
     //     ticket_system.refund_ticket(refunded_order.ticket,
@@ -478,39 +476,53 @@ void System::refund_ticket() {
     order result;
     // std::cerr<<"waiting_list size:
     // "<<ticket_system.waiting_list.size()<<endl;
-    for (auto it = ticket_system.waiting_list.begin();
-         it != ticket_system.waiting_list.end();) {
-        Train tr = train_system.find_train(it->ticket.trainID);
-        int seat_res = tr.get_seat_res(it->ticket.from_station,
-                                       it->ticket.to_station, it->ticket.date);
-        // std::cerr<<"checking waiting ticket "<<it->ticket.trainID<<'
-        // '<<it->ticket.from_station<<' '<<it->ticket.to_station<<'
-        // '<<it->ticket.date<<endl; std::cerr<<"seat res for waiting ticket
-        // "<<seat_res<<endl;
-        if (seat_res >= it->num) {
-            // std::cerr<<"found waiting ticket can be processed
-            // "<<it->ticket.trainID<<' '<<it->ticket.from_station<<'
-            // '<<it->ticket.to_station<<' '<<it->ticket.date<<endl;
-            result = *it;
-            std::strcpy(result.status, "success");
-            ticket_system.waiting_list.erase(it);
-            break;
-        } else {
-            ++it;
+    bool isfound = 0;
+    while (ticket_system.waiting_list.size() > 0) {
+        isfound = 0;
+        Train tr_processed;  // 保存需要处理的Train对象
+        for (auto it = ticket_system.waiting_list.begin();
+             it != ticket_system.waiting_list.end();) {
+            Train tr = train_system.find_train(it->ticket.trainID);
+            int seat_res =
+                tr.get_seat_res(it->ticket.from_station, it->ticket.to_station,
+                                it->ticket.date);
+            // DEBUG: 检查目标订单的站点索引
+            int wait_from = -1, wait_to = -1;
+            for (int i = 0; i < tr.stationNum; i++) {
+                if (tr.stations[i] == it->ticket.from_station) wait_from = i;
+                if (tr.stations[i] == it->ticket.to_station) wait_to = i;
+            }
+            std::cout << "[DEBUG] Waiting order: from=" << wait_from << " to=" << wait_to
+                      << " date=" << it->ticket.date << " num=" << it->num << std::endl;
+            if (seat_res >= it->num) {
+                // std::cerr<<"found waiting ticket can be processed
+                // "<<it->ticket.trainID<<' '<<it->ticket.from_station<<'
+                // '<<it->ticket.to_station<<' '<<it->ticket.date<<endl;
+                result = *it;
+                std::strcpy(result.status, "success");
+                ticket_system.waiting_list.erase(it);
+                tr_processed = tr;  // 保存这个Train对象
+                isfound = 1;
+                break;
+            } else {
+                ++it;
+            }
         }
-    }
-    // std::cerr<<"after processing waiting list\n";
-    if (!(result == order())) {
-        // std::cerr<<"processing waiting ticket "<<result.ticket.trainID<<'
-        // '<<result.ticket.from_station<<' '<<result.ticket.to_station<<'
-        // '<<result.ticket.date<<endl;
-        user_system.modify_order(result, "success");
-        // 优化：需要重新查询Train来获取最新状态
-        Train tr = train_system.find_train(result.ticket.trainID);
-        tr.update_seat_res(result.ticket.from_station, result.ticket.to_station,
-                           result.ticket.date, result.num);
-        train_system.train_tree.erase(result.ticket.trainID, tr);
-        train_system.train_tree.insert(result.ticket.trainID, tr);
+        if (!isfound) break;  // 没有找到可以满足的订单，退出while循环
+        // std::cerr<<"after processing waiting list\n";
+        if (!(result == order())) {
+            // std::cerr<<"processing waiting ticket "<<result.ticket.trainID<<'
+            // '<<result.ticket.from_station<<' '<<result.ticket.to_station<<'
+            // '<<result.ticket.date<<endl;
+            // 关键修复：使用已经查询过的Train对象，而不是重新查询
+            train_system.train_tree.erase(tr_processed.ID, tr_processed);
+            tr_processed.update_seat_res(result.ticket.from_station,
+                                     result.ticket.to_station, result.ticket.date,
+                                     result.num);
+            train_system.train_tree.insert(tr_processed.ID, tr_processed);
+            user_system.modify_order(result, "success");
+        }
+        if (!isfound) break;
     }
     cout << 0 << endl;
 }
@@ -522,8 +534,6 @@ void System::query_order() {
     // cerr<<key<<' '<<user_id<<endl;
     if (!user_system.query_ordered_tickets(user_id)) throw -1;
 }
-
-
 
 void System::clean() {
     user_cnt = 0;
