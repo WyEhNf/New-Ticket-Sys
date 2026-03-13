@@ -492,8 +492,8 @@ void System::refund_ticket() {
                 if (tr.stations[i] == it->ticket.from_station) wait_from = i;
                 if (tr.stations[i] == it->ticket.to_station) wait_to = i;
             }
-            std::cout << "[DEBUG] Waiting order: from=" << wait_from << " to=" << wait_to
-                      << " date=" << it->ticket.date << " num=" << it->num << std::endl;
+            // std::cout << "[DEBUG] Waiting order: from=" << wait_from << " to=" << wait_to
+            //           << " date=" << it->ticket.date << " num=" << it->num << std::endl;
             if (seat_res >= it->num) {
                 // std::cerr<<"found waiting ticket can be processed
                 // "<<it->ticket.trainID<<' '<<it->ticket.from_station<<'
